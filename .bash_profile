@@ -3,7 +3,7 @@
 arch=$(uname -m)
 
 # add some architecture dependent aliases:
-if [ "$arch"=='i686' ]
+if [ "$arch" == 'i686' ]
 then
         alias proj="cd 
 /cygdrive/c/Users/Brian/Documents/Projects/"
@@ -11,7 +11,7 @@ then
         alias py="/cygdrive/c/Python27/python.exe"
         alias home="/cygdrive/c/Users/Brian/"
 	alias open="cygstart"
-elif [ "$arch"=='x86_64' ]
+elif [ "$arch" == 'x86_64' ]
 then
         alias proj="cd ~/Project/"
         alias py="python"
