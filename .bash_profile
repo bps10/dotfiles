@@ -1,3 +1,29 @@
+#!/bin/bash
+
+arch=$(uname -m)
+
+# add some architecture dependent aliases:
+if [ "$arch"=='i686' ]
+then
+        alias proj="cd 
+/cygdrive/c/Users/Brian/Documents/Projects/"
+        # fix Python path:
+        alias py="/cygdrive/c/Python27/python.exe"
+        alias home="/cygdrive/c/Users/Brian/"
+elif [ "$arch"=='darwin' ]
+then
+        alias proj="cd ~/Project/"
+        alias py="python"
+fi
+
+# present
+alias present="proj; cd bps10.github.com/presentations/;py -m 
+SimpleHTTPServer 8890 & cygstart http://localhost:8890;"
+
+# add elastic beanstalk:
+export PATH="$PATH:/usr/local/aws/aws/eb/windows"
+
+#############################
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
 
