@@ -10,6 +10,7 @@ then
         # fix Python path:
         alias py="/cygdrive/c/Python27/python.exe"
         alias home="/cygdrive/c/Users/Brian/"
+	alias open="cygstart"
 elif [ "$arch"=='darwin' ]
 then
         alias proj="cd ~/Project/"
@@ -17,8 +18,7 @@ then
 fi
 
 # present
-alias present="proj; cd bps10.github.com/presentations/;py -m 
-SimpleHTTPServer 8890 & cygstart http://localhost:8890;"
+alias present="proj; cd bps10.github.com/presentations/;py -m SimpleHTTPServer 8890 & open http://localhost:8890;"
 
 # add elastic beanstalk:
 export PATH="$PATH:/usr/local/aws/aws/eb/windows"
