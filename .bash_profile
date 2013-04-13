@@ -11,7 +11,7 @@ then
         alias py="/cygdrive/c/Python27/python.exe"
         alias home="/cygdrive/c/Users/Brian/"
 	alias open="cygstart"
-elif [ "$arch"=='darwin' ]
+elif [ "$arch"=='x86_64' ]
 then
         alias proj="cd ~/Project/"
         alias py="python"
