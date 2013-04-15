@@ -13,12 +13,15 @@ then
 	alias open="cygstart"
 elif [ "$arch" == 'x86_64' ]
 then
-        alias proj="cd ~/Project/"
+        alias proj="cd ~/Projects/"
         alias py="python"
 fi
 
+# NeitzModel
+alias neitz="proj && cd NeitzModel && python manage.py runserver & open http://127.0.0.1:8000"
+
 # present
-alias present="proj; cd bps10.github.com/presentations/;py -m SimpleHTTPServer 8890 & open http://localhost:8890;"
+alias present="proj && cd bps10.github.com/presentations/ && py -m SimpleHTTPServer 8890 & open http://localhost:8890;"
 
 # add elastic beanstalk:
 export PATH="$PATH:/usr/local/aws/aws/eb/windows"
