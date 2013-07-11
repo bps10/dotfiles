@@ -6,7 +6,7 @@ arch=$(uname -m)
 if [ "$arch" == 'i686' ]
 then
         alias proj="cd 
-/cygdrive/c/Users/Brian/Documents/Projects/"
+/cygdrive/c/Users/Brian/Projects/"
         # fix Python path:
         alias py="/cygdrive/c/Python27/python.exe"
         alias home="/cygdrive/c/Users/Brian/"
@@ -15,7 +15,11 @@ elif [ "$arch" == 'x86_64' ]
 then
         alias proj="cd ~/Projects/"
         alias py="python"
+	alias matlab=". /Applications/MATLAB_R2011a_Student.app/bin/matlab"
 fi
+
+# hues
+alias hues="python ~/Projects/hues"
 
 # NeitzModel
 alias neitz="proj && cd NeitzModel && python manage.py runserver & open http://127.0.0.1:8000"
@@ -28,7 +32,7 @@ export PATH="$PATH:/usr/local/aws/aws/eb/windows"
 
 #############################
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH"
+export PATH="/usr/local/bin:SHOME/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
