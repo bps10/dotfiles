@@ -1,3 +1,30 @@
+arch=$(uname -m)
+
+# add some architecture dependent aliases:
+if [ "$arch" == 'i686' ]
+then
+
+        alias proj="cd /cygdrive/c/Users/Brian/Documents/Projects/"
+        # fix Python path:
+        alias py="/cygdrive/c/Python27/python.exe"
+        alias home="/cygdrive/c/Users/Brian/"
+	alias open="cygstart"
+        #alias hues="py C:/Users/Brian/Documents/Projects/hues"
+        alias gnuplot="GGI_DEFMODE=600x300 gnuplot"
+elif [ "$arch" == 'x86_64' ]
+then
+        alias proj="cd ~/Projects/"
+        alias py="python"
+	alias matlab=". /Applications/MATLAB_R2011a_Student.app/bin/matlab"
+        alias hues="python ~/Projects/hues"
+fi
+
+# NeitzModel
+alias neitz="proj && cd NeitzModel && python manage.py runserver & open http://127.0.0.1:8000"
+
+# present
+alias present="proj && cd bps10.github.com/presentations/ && py -m SimpleHTTPServer 8890 & open http://localhost:8890;"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."

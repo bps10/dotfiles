@@ -1,32 +1,5 @@
 #!/bin/bash
 
-arch=$(uname -m)
-
-# add some architecture dependent aliases:
-if [ "$arch" == 'i686' ]
-then
-
-        alias proj="cd /cygdrive/c/Users/Brian/Projects/"
-        # fix Python path:
-        alias py="/cygdrive/c/Python27/python.exe"
-        alias home="/cygdrive/c/Users/Brian/"
-	alias open="cygstart"
-elif [ "$arch" == 'x86_64' ]
-then
-        alias proj="cd ~/Projects/"
-        alias py="python"
-	alias matlab=". /Applications/MATLAB_R2011a_Student.app/bin/matlab"
-fi
-
-# hues
-alias hues="python ~/Projects/hues"
-
-# NeitzModel
-alias neitz="proj && cd NeitzModel && python manage.py runserver & open http://127.0.0.1:8000"
-
-# present
-alias present="proj && cd bps10.github.com/presentations/ && py -m SimpleHTTPServer 8890 & open http://localhost:8890;"
-
 # add elastic beanstalk:
 export PATH="$PATH:/usr/local/aws/aws/eb/windows"
 
