@@ -114,8 +114,8 @@ if ! shopt -oq posix; then
 fi
 
 # Added by BPS
-# Make vim the default editor
-export EDITOR="emacs"
+# Make emacs the default editor
+export EDITOR="env TERM=xterm-256color emacs -nw"
 
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
