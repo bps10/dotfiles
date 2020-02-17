@@ -1,31 +1,15 @@
 # aliases
 
 # Shortcuts
-alias drop="cd ~/Dropbox/Berkeley"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-#alias p="cd ~/Projects"
-alias g="git"
 alias h="history"
 alias proj="cd ~/Projects/"
-alias mat="cd ~/bin/; ./matlab & "
-alias matterm="cd ~/bin/; ./matlab -nodesktop -nosplash"
-#alias mat="proj; cd MATLAB/; ptb3-matlab"
-#alias matterm="proj; cd MATLAB/; ptb3-matlab -nodesktop -nosplash"
-alias mendeley="cd ~/Documents/mendeleydesktop-1.18-linux-x86_64; ./bin/mendeleydesktop"
-alias py="python"
-alias notebook="proj; cd notebooks; jupyter notebook"
-alias d3="proj; cd js/d3/; http-server &"
-alias bps10="proj; cd bps10.github.io/; google-chrome "http://127.0.0.1:4000"; bundle exec jekyll serve --livereload;"
-
-# backup data from lyle onto AWS with Standard Infrequent Access (IA) storage class.
-alias aws_sync="aws s3 sync /media/brian/lyle/Video_Files s3://aovis-backup --storage-class=STANDARD_IA"
 
 # make sudo work with aliases
 alias sudo="sudo "
 
 # run emacs from the terminal with colo
 alias emacs="env TERM=xterm-256color emacs -nw"
+# alias emacs="emacs -nw"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
